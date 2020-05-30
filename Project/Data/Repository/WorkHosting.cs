@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Http;
 // имя пользователя хостинг f0442011
 // пароль uztuasismi
 namespace Project.Data.Repository
-{// класс работв с хостингом 
+{// класс работы с хостингом 
     public class WorkHosting
     {
         public void CreatCourse(string name)// cоздает папку на хостинге где будут храниться материалы урока
