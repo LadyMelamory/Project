@@ -25,11 +25,24 @@ namespace Project
       
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            DefaultFilesOptions options = new DefaultFilesOptions();
+           // options.DefaultFileNames.Clear(); // удаляем имена файлов по умолчанию
+            options.DefaultFileNames.Add("LoginPage.cshtml"); // добавляем новое имя файла
+            app.UseDefaultFiles(options); // установка параметров
+
+            //app.UseStaticFiles();
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
             app.UseSession();
+
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Login}/{action=LoginPage}/{id?}");
+            });
             //app.UseEndpoints(endpoints =>
             //{
             //    endpoints.MapRazorPages();  // Добавляем маршрутизацию для RazorPages

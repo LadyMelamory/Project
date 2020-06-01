@@ -25,6 +25,7 @@ select
     width: 200px;
     font-size: 30px;
     outline: none;
+    padding:10px;
 }
 
 input {

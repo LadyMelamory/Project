@@ -45,7 +45,7 @@ namespace Project
         static public string enterpassword;// пароль для входа
         static public Teachers datateacher;// данные учителя
         static public Pupils datapupils;// данные ученика на странице
-        static public Parents dataperants;// данные родителя 
+        static public Parents dataparents;// данные родителя 
 
         static public int idcours;// id курса
         static public string namecours;// название курса

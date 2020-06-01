@@ -34,7 +34,7 @@ namespace Project.Controllers
                 {
                     case 1: Program.datateacher = w.UserDataT(vs); return RedirectPermanent("~/TeacherPage/Page1");
                     case 2: Program.datapupils = w.UserDataP(vs); return View(); 
-                    case 3: Program.dataperants = w.UserDataPa(vs); return View(); 
+                    case 3: Program.dataparents = w.UserDataPa(vs); return View(); 
                     default: return View(); 
                 }
 

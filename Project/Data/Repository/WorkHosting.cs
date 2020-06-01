@@ -16,6 +16,7 @@ namespace Project.Data.Repository
         public void CreatCourse(string name)// cоздает папку на хостинге где будут храниться материалы урока
         {
             FtpWebRequest request = (FtpWebRequest)WebRequest.Create("ftp://141.8.193.236/" + name);
+            request.UsePassive = true;
             request.Method = WebRequestMethods.Ftp.MakeDirectory;
             request.Credentials = new NetworkCredential("f0442011", "uztuasismi");
             using (var resp = (FtpWebResponse)request.GetResponse())
@@ -87,8 +88,6 @@ namespace Project.Data.Repository
             requestStream_3.Close();
             FtpWebResponse response_3 = (FtpWebResponse)request_3.GetResponse();
             File.Delete(linkpath);
-
-
         }
 
         public void DeleteDirectoryCourses(string name)// удаляем файлы и папку с курсом 

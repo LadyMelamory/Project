@@ -5,14 +5,15 @@ $(document).ready(function ()
 
 
 
-$('input[type="text"]').change(function ()
+$('input').change(function ()
 {
-
     var text_input_em = $('input[type="text"]:first').val();
-    var text_input_pass = $('input[type="text"]:last').val();
+    var text_input_pass = $('input[type="password"]:first').val();
     if (text_input_em.length != 0 && text_input_pass.length != 0)
     {
+        var ent = $('#enter');
         $('#enter').attr('disabled', false);
+        $('#enter').css('cursor', 'pointer');
     }
     
 });
