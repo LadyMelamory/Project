@@ -19,7 +19,6 @@ namespace Project.Controllers
                    
         }
 
-
         [HttpGet]
         public IActionResult PupileReg()// отправляем на страницу список школ
         {

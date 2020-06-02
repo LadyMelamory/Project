@@ -1,5 +1,4 @@
-﻿.contaner 
-{
+﻿.contaner {
     text-align: center;
     margin: 0 auto;
     font-size: 15px;
@@ -7,73 +6,129 @@
     width: 1000px;
 }
 
-body 
-{
+body {
     font-family: 'Amatic SC', 'Bodoni MT';
+    font-family: Arial;
     background-image: linear-gradient(to right, #997489, #b87f84, #cb8f79, #cca771, #bbc379, #abd289, #96e0a0, #7bedbd, #73f1ca, #6bf4d7, #64f8e4, #5ffbf1);
 }
 
-#square 
-{
-    width: 500px;
-    height: 1000px;
+#square {
+    position:relative;
+    width: 540px;
+    /*height: 1000px;*/
+    text-align: center;
     margin: 0 auto;
     background-image: linear-gradient(to bottom, #997489, #a87797, #b679a7, #c27cb8, #cc80cb, #d37fd2, #d97eda, #e07de1, #e776db, #ee6fd4, #f567cd, #fb5fc5);
     margin-bottom: 50px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-top: 75px;
+}
+
+.row{
+    margin-left:0px!important;
+    margin-right:0px!important;
+}
+.passw{
+   width:100%;
 }
 
 input {
     color: black;
-    margin-bottom: 10px;
+    margin-bottom: 10px !important;
+    margin-top: 10px !important;
+    margin-left: 20%;
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    width: 220px;
+    border: 1px;
+    border-radius: 15px !important;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    line-height: 15px;
+}
+
+.inp {
+    width: 300px;
+}
+
+.inpw {
+    /*margin-left: 30px!important;*/
+}
+
+.inpw p {
+    margin-bottom:0px!important;
+}
+
+button {
+    color: black;
     margin-left: 20%;
     font-size: 16px;
     padding: 10px;
     display: block;
-    width: 300px;
     border: 1px;
-    border-radius: 25px;
+    border-radius: 15px !important;
     border-bottom: 1px solid #ccc;
     outline: none;
+    line-height: 15px;
+    width: 200px;
+    margin: 0 auto !important;
+    margin-bottom: 10px !important;
+    margin-top: 20px !important;
+    font-family: Arial;
+}
+
+option {
+    border-radius: 15px;
 }
 
 select {
     border: 1px;
-    border-radius: 25px;
+    border-radius: 15px;
     width: 220px;
-    font-size: 20px;
+    font-size: 18px;
     outline: none;
-    padding:10px;
+    padding: 5px 10px;
 }
 
-p 
-{
+p {
     font-size: 20px;
+    margin: 10px 0px !important;
+    line-height: 1;
 }
 
-#confirmation 
-{
+#confirmation {
     background: white;
     color: black;
-    width: 60px;
+    width: 100px;
     margin-left: 45%;
     font-family: 'Amatic SC', 'Bodoni MT';
+   font-family:Arial;
+   font-size:15px;
     outline: none;
 }
 
 #randompassword {
     width: 50px;
     height: 48px;
-    margin-left: 45%;
+    /*margin-left: 35%;*/
     background-image: url("/img/random.png");
 }
-
-#showpassword
-{
-    content: "Show";
+#pas {
+    align-self: center;
+    font-size:15px;
+    margin-top:0px!important;
 }
 
-#confirmation
-{
-    margin-left:35%;
-    width: 150px;
+#showpassword {
+    content: "Show";
+    align-self: center;
+    width: 10px;
+    margin-right:4px!important;
+}
+
+#confirmation {
+    margin-left: 35%;
+    width: 165px;
 }

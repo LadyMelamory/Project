@@ -38,7 +38,7 @@ namespace Project
         static public string patrF;//отчетсво отца
         static public string phonF;// номер отца
         static public int codep;//код для регистрации родителей
-
+        static public string testpath= "/js/gtbfvd1.js";//путь к данным теста
 
 
         static public string enterlog;// логин для входа

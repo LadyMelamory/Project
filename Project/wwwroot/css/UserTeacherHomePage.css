@@ -13,7 +13,7 @@
 
 .menu a 
 {
-    padding: 6px 8px 6px 16px;
+    padding: 6px 0px;
     text-decoration: none;
     font-size: 25px;
     color: white;
@@ -42,4 +42,23 @@
     {
         font-size: 18px;
     }
+}
+
+.menu p {
+    color: #4600b9;
+    font-family: 'Comic Sans MS';
+    font-size: 15px;
+    margin-bottom: 40px;
+}
+h2 {
+    margin-top: 20px;
+    color: #1e014d;
+    font-family: 'Comic Sans MS';
+    font-size: 17px;
+}
+.men{
+    margin-top:150px;
+    display:flex;
+    align-items:center;
+    flex-direction:column;
 }

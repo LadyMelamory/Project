@@ -21,7 +21,7 @@ namespace Project.Data.Repository
             request.Credentials = new NetworkCredential("f0442011", "uztuasismi");
             using (var resp = (FtpWebResponse)request.GetResponse())
             {
-                 //string s = resp.StatusCode.ToString();
+                //string s = resp.StatusCode.ToString();
             }
         }
 
@@ -32,24 +32,27 @@ namespace Project.Data.Repository
             request.Credentials = new NetworkCredential("f0442011", "uztuasismi");
             FtpWebResponse response = (FtpWebResponse)request.GetResponse();
             //загружаем файл
-            string path = @"C:\Users\Люда\Desktop\Крсовая 3 курс\Project\Project\wwwroot\file\" + countlesson+"_"+pathfile.FileName;
-            using (var fileStream = new FileStream(path, FileMode.Create))
+            if (pathfile != null)
             {
-                pathfile.CopyToAsync(fileStream);
+                string path = @"wwwroot\file\" + countlesson + "_" + pathfile.FileName;
+                using (var fileStream = new FileStream(path, FileMode.Create))
+                {
+                    pathfile.CopyToAsync(fileStream);
+                }
+                FtpWebRequest request_1 = (FtpWebRequest)WebRequest.Create("ftp://141.8.193.236/" + namefile + "/" + countlesson + "_" + pathfile.FileName);
+                request_1.Credentials = new NetworkCredential("f0442011", "uztuasismi");
+                request_1.Method = WebRequestMethods.Ftp.UploadFile;
+                FileStream fs_1 = new FileStream(path, FileMode.Open);
+                byte[] fileContents_1 = new byte[fs_1.Length];
+                fs_1.Read(fileContents_1, 0, fileContents_1.Length);
+                fs_1.Close();
+                request_1.ContentLength = fileContents_1.Length;
+                Stream requestStream_1 = request_1.GetRequestStream();
+                requestStream_1.Write(fileContents_1, 0, fileContents_1.Length);
+                requestStream_1.Close();
+                FtpWebResponse response_0 = (FtpWebResponse)request_1.GetResponse();
+                File.Delete(path);
             }
-            FtpWebRequest request_1 = (FtpWebRequest)WebRequest.Create("ftp://141.8.193.236/" + namefile + "/" +   countlesson + "_" + pathfile.FileName );
-            request_1.Credentials = new NetworkCredential("f0442011", "uztuasismi");
-            request_1.Method = WebRequestMethods.Ftp.UploadFile;
-            FileStream fs_1 = new FileStream(path, FileMode.Open);
-            byte[] fileContents_1 = new byte[fs_1.Length];
-            fs_1.Read(fileContents_1, 0, fileContents_1.Length);
-            fs_1.Close();
-            request_1.ContentLength = fileContents_1.Length;
-            Stream requestStream_1 = request_1.GetRequestStream();
-            requestStream_1.Write(fileContents_1, 0, fileContents_1.Length);
-            requestStream_1.Close();
-            FtpWebResponse response_0 = (FtpWebResponse)request_1.GetResponse();
-            File.Delete(path);
             //загружаем текстовый файл с информацией
             string writePath = "Info" + countlesson + ".txt";
             using (StreamWriter sw = new StreamWriter(writePath, false, System.Text.Encoding.Default))

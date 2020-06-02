@@ -5,10 +5,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using Word = Microsoft.Office.Interop.Word;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
+using System.Text.Json;
 
-namespace Проект_version
+namespace Project
 {
-    public class Test //класс для хранения теста
+    public struct TestName
+    {
+        public NewTest Test { get; private set; }
+        public string Name { get; private set; }
+        public TestName(string name, NewTest test)
+        {
+            Test = test;
+            Name = name;
+        }
+    }
+
+    public class NewTest //класс для хранения теста
     {
         public List<Question> Quest { get; private set; }  //список вопросов теста
         // public bool[] UserAnswers;
@@ -17,9 +30,15 @@ namespace Проект_version
         public int Time { get; set; } //время в минутах, отведенное на выполнение теста
         public List<ImageTest> Images { get; set; } //список картинок в тесте
 
+        public string Name { get; private set; }
+
         private string[] ReadQ1(string path)//считывание теста из текстового файла
         {
             StreamReader sr = new StreamReader(path, Encoding.Default);
+            //получаем название теста из пути
+            int pos1 = path.LastIndexOf('\\');
+            int pos2 = path.LastIndexOf('.');
+            Name = path.Substring((pos1 < 0 ? 0 : pos1+1), pos2 - pos1-1);
             string s = sr.ReadToEnd();
             sr.Close();
             string AllText = s;//получение всего текста в документе
@@ -27,6 +46,46 @@ namespace Проект_version
             string[] line = AllText.Split(new char[] { '$' });
             return line;
         }
+
+        public string GenerateJSCode()
+        { 
+             string jscode = "var questions = [";
+            foreach (var quest in Quest)
+            {
+                jscode += "{type: \"choose\",";
+                jscode += $"question: \"<h3>{quest.question}</h3>\",";
+                jscode += $"answers: [";
+                for (int i = 0; i < quest.Answers.Count; i++)
+                {
+                    jscode += $"\"{quest.Answers[i]}\"";
+                    if (i < quest.Answers.Count - 1)
+                    {
+                        jscode += ",";
+                    }
+                    jscode += "";
+                }
+                jscode += "],correct:[";
+                for (int i = 0; i < quest.CorrectAnsw.Count; i++)
+                {
+                    jscode += $"{quest.CorrectAnsw[i]}";
+                    if (i < quest.Answers.Count - 1)
+                    {
+                        jscode += ",";
+                    }
+                }
+                jscode += "]";
+                jscode += "},";
+            }
+            jscode = jscode.Remove(jscode.Length - 2);
+            jscode += "];";
+            Program.testpath = "wwwroot/tests/" + Name + ".txt";
+            using (StreamWriter sw = new StreamWriter(Program.testpath, false, System.Text.Encoding.Default))
+            {
+                sw.WriteLine(jscode);
+            }
+            return jscode;
+        }
+
 
         public void AddQuest(string quest, string[] answ) //добавление нового вопроса
         {
@@ -92,7 +151,8 @@ namespace Проект_version
             MSWord.Quit();
             return line;
         }
-        public Test(string path, bool randOrder, int questNumb, int time)
+
+        public NewTest(string path, bool randOrder, int questNumb, int time)
         {
             if (File.Exists(path))
             {
@@ -161,7 +221,7 @@ namespace Проект_version
                 Time = time;
             }
         }
-        public Test(string path)
+        public NewTest(string path)
         {
             if (File.Exists(path))
             {
@@ -228,6 +288,6 @@ namespace Проект_version
                 Time = 60;
             }
         }
-        public Test() { }
+        public NewTest() { }
     }
 }

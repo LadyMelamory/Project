@@ -7,10 +7,11 @@
     width: 1000px;
 }
 
-body 
-{
+body {
     font-family: 'Amatic SC', 'Bodoni MT';
-    background-image: linear-gradient(to right, #997489, #b87f84, #cb8f79, #cca771, #bbc379, #abd289, #96e0a0, #7bedbd, #73f1ca, #6bf4d7, #64f8e4, #5ffbf1);
+    background: rgb(213,185,255);
+    background: radial-gradient(circle, rgba(213,185,255,1) 0%, rgba(189,211,255,1) 100%);
+    /*background-image: linear-gradient(to right, #997489, #b87f84, #cb8f79, #cca771, #bbc379, #abd289, #96e0a0, #7bedbd, #73f1ca, #6bf4d7, #64f8e4, #5ffbf1);*/
 }
 
 h1
@@ -33,5 +34,43 @@ input {
     border-radius: 25px;
     font-size: 30px;
     outline: none;
+}
+
+option {
+    border-radius: 15px;
+}
+
+select {
+    border: 1px;
+    border-radius: 15px;
+    /*width: 220px;*/
+    font-size: 28px;
+    outline: none;
+    padding: 5px 10px;
+    margin-left: 148px !important;
+    margin-top: 35px;
+    font-family: 'Candara';
+    text-align: center;
+}
+button {
+    font-family: Candara;
+    color: black;
+    /*margin-left: 20%;*/
+    font-size: 17px;
+    padding: 5px 7px;
+    display: block;
+    border: 1px;
+    border-radius: 25px !important;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    /*width: 180px;*/
+    margin: 0 auto !important;
+    margin-bottom: 50px !important;
+    /*background: #fff4f4;*/
+    margin-top: 25px !important;
+}
+
+#square{
+    margin-top:200px;
 }
 

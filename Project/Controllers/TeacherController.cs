@@ -13,8 +13,7 @@ namespace Project.Controllers
        
         List<School> listschools;
         List<Subject> listsubjects;
-        WorkDB work = new WorkDB();
-      
+        WorkDB work = new WorkDB();   
         
 
         public TeacherController()

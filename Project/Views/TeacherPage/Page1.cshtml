@@ -9,14 +9,18 @@
 
 <h1>Page1</h1>
 <div class="menu">
-    <a href="~/NewCourse/NewCours">Новый курс</a>
-    <a href="~/ExistingCourses/ShowCourses">Все курсы</a>
-    <a href="~/UserTeacherSettings/UpdateTeacher">Настройки</a>
-</div>
-<div class="contentpage">
+    <h2>
+        Учитель
+    </h2>
     <p>
-        @Program.datateacher.Name<br />
-        @Program.datateacher.Surname<br />
-        @Program.datateacher.Patronymic<br/>
-    <p>
+        @Program.datateacher.Name
+        @Program.datateacher.Patronymic
+        @Program.datateacher.Surname
+    </p>
+    <div class="men">
+        <a href="~/NewCourse/NewCours">Новый курс</a>
+        <a href="~/ExistingCourses/ShowCourses">Все курсы</a>
+        <a href="~/UserTeacherSettings/UpdateTeacher">Настройки</a>
+    </div>
 </div>
+

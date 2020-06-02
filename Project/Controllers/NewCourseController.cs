@@ -10,13 +10,11 @@ namespace Project.Controllers
 {
     public class NewCourseController : Controller
     {
-
         List<Subject> listsubjects;// список предметов 
         List<School> schools;
         WorkDB work = new WorkDB();
         public NewCourseController()
         {
-
             listsubjects = work.GetSubjects();
             schools = work.GetSchools();
         }
@@ -33,11 +31,11 @@ namespace Project.Controllers
         [HttpPost]
         public IActionResult NewCours(string namec, int sudject, int _class)// создается новый курс 
         {
-
             work.AddCourse(Program.datateacher.Idteacher, namec, _class, Program.datateacher.Idschool, sudject);
             WorkHosting workh = new WorkHosting();
             workh.CreatCourse(String.Concat(namec , "_" , Program.datateacher.Idteacher));
-            return View();
+            SchoolModels sm = new SchoolModels();
+            return RedirectPermanent("~/TeacherPage/Page1");
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Проект_version
+namespace Project
 {
     public class Question //класс вопрос
     {
@@ -49,6 +49,8 @@ namespace Проект_version
             CorrectAnsw = new List<int>();
             UserAnsw = new List<int>();
         }
+
+       
 
         public void SetAnswers(string[] answ) //метод для установки новых ответов
         {

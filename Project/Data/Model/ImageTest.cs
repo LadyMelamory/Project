@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace Проект_version
+namespace Project
 {
     public class ImageTest// класс для хранения данных о картинках
     {
