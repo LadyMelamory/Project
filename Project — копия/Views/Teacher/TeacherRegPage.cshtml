@@ -1,0 +1,55 @@
+﻿@using Project.ViewModel;
+@model SchoolModels;
+@{
+    Layout = "TeacherReg";
+    ViewData["Title"] = "TeacherRegPage";
+}
+<form method="post">
+    <div id="square">
+        <h1>Регистрация</h1>
+        <div class="row d-flex">
+            <div class="col-md-6">
+                <p>Фамилия</p>
+                <input type="text" name="surname" />
+                <p>Имя</p>
+                <input type="text" name="name" />
+                <p>Отчество</p>
+                <input type="text" name="patr" />
+            </div>
+            <div class="col-md-6">
+                <p>Школа</p>
+                <select name="school">
+                    @foreach (var tmp in Model.schools)
+                    {
+                        <option value="@tmp.Idschool">@tmp.NameSchool</option>
+                    }
+                </select>
+                <p>Предмет</p>
+                <select name="sudject">
+                    @foreach (var tmp in Model.subjects)
+                    {
+                        <option value="@tmp.Idsubject">@tmp.NamrSubject</option>
+                    }
+                </select>
+            </div>
+            <div class="passw row d-flex">
+                <div class="inpw col col-md-6 d-flex flex-column text-center justify-content-center">
+                    <p>Телефон</p>
+                    <input type="text" name="phone" />
+                    <p>E-mail</p>
+                    <input type="text" name="email" />
+                </div>
+                <div class="inpw col col-md-6 d-flex flex-column text-center justify-content-center">
+                    <p>Пароль</p>
+                    <input id="password_1" type="password" name="password" />
+                    <div class="d-flex justify-content-md-center">
+                        <input id="randompassword" type="button" />
+                        <input class="d-block" id="showpassword" type="checkbox" value="Показать пароль" /><p id="pas">Показать пароль</p>
+                    </div>
+                </div>
+            </div>
+            <input id="confirmation" type="submit" value="Подтвердить данные" />
+        </div>
+    </div>
+</form>
+

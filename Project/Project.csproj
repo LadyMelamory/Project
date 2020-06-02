@@ -5,11 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Remove="wwwroot\js\View.xaml" />
-    <Content Remove="wwwroot\js\View.xaml.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <None Remove="var questions = [{typ.js" />
     <None Remove="var questions = [{type.js" />
   </ItemGroup>
@@ -27,11 +22,6 @@
     <PackageReference Include="Microsoft.Office.Interop.Word" Version="15.0.4797.1003" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.3" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\img\" />
-    <Folder Include="wwwroot\file\" />
   </ItemGroup>
 
 </Project>

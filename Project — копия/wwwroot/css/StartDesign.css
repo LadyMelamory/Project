@@ -1,0 +1,82 @@
+﻿.contaner 
+{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 15px;
+    position: relative;
+    width: 1000px;
+}
+
+body {
+    font-family: 'Amatic SC', 'Bodoni MT';
+    /*background-image: linear-gradient(to top, #997489, #b87f84, #cb8f79, #cca771, #bbc379, #abd289, #96e0a0, #7bedbd, #73f1ca, #6bf4d7, #64f8e4, #5ffbf1);*/
+    /*background: rgb(241,200,218);
+    background: radial-gradient(circle, rgba(241,200,218,1) 21%, rgba(185,214,248,0.9729655084003972) 100%);*/
+    background: rgb(213,185,255);
+    background: radial-gradient(circle, rgba(213,185,255,1) 0%, rgba(189,211,255,1) 100%);
+}
+
+#square {
+    width: 500px;
+    height: 550px;
+    margin: 0 auto;
+    background: rgb(255,220,171);
+    background: radial-gradient(circle, rgba(255,220,171,1) 6%, rgba(224,181,254,1) 100%);
+    /*background-image: linear-gradient(to bottom, #997489, #a87797, #b679a7, #c27cb8, #cc80cb, #d37fd2, #d97eda, #e07de1, #e776db, #ee6fd4, #f567cd, #fb5fc5);*/
+    margin-top: 100px;
+    box-shadow: 1px 1px 5px 5px rgba(224,181,254,1);
+}
+
+    #square h1 {
+        font-size: 80px;
+        padding: 10px 15px 0px;
+        margin-bottom: 15px;
+        /*font-family: 'Open Sans Condensed', sans-serif;*/
+        font-weight: 500;
+    }
+
+p 
+{    
+    margin:0px 10px 10px;
+    font-size: 40px;
+}
+
+form input {
+    color: black;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 10px;
+    display: block;
+    width: 300px;
+    border: 1px;
+    border-radius: 15px;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+#enter {
+    background: white;
+    color: black;
+    margin: 0 auto;
+    margin-top:30px;
+    width:120px;
+    font-family: 'Amatic SC', 'Bodoni MT';
+    outline: none;
+    font-size: 30px;
+    padding: 7px 20px;
+    border: 1px;
+    border-radius: 15px;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+#registration {
+    font-size: 30px;
+    outline: none;
+    margin-top: 40px;
+}
+    #registration a {
+        color: black;
+    }
+

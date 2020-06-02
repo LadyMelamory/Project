@@ -1,0 +1,51 @@
+﻿body {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: rgb(213,185,255);
+    background: radial-gradient(circle, rgba(213,185,255,1) 0%, rgba(189,211,255,1) 100%);
+}
+form input {
+    color: black;
+    margin: 0 auto;
+    /*margin-bottom: 10px;*/
+    font-size: 16px;
+    padding: 5px 10px;
+    display: block;
+    /*width: 300px;*/
+    border: 1px;
+    border-radius: 15px;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    line-height: 15px;
+}
+button {
+    background: white;
+    color: black;
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 120px;
+    font-family: 'Amatic SC', 'Bodoni MT';
+    outline: none;
+    font-size: 30px;
+    padding: 7px 20px;
+    border: 1px;
+    border-radius: 15px;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+.menu{
+    text-align:center;
+    padding: 0px 10px;
+}
+.btn{
+    margin-top:5px;
+}
+#square {
+    width: 500px;
+    /*height: 550px;*/
+    margin: 0 auto;
+    background: rgb(255,220,171);
+    background: radial-gradient(circle, rgba(255,220,171,1) 6%, rgba(224,181,254,1) 100%);
+    /*background-image: linear-gradient(to bottom, #997489, #a87797, #b679a7, #c27cb8, #cc80cb, #d37fd2, #d97eda, #e07de1, #e776db, #ee6fd4, #f567cd, #fb5fc5);*/
+    margin-top: 100px;
+    box-shadow: 1px 1px 5px 5px rgba(224,181,254,1);
+}

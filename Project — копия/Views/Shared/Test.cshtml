@@ -1,0 +1,21 @@
+﻿@using Project
+@using System.IO
+
+@model Project.NewTest
+
+
+<div id="jQuizler" class="main-quiz-holder">
+    <h3>Тест на тему: "@Model.Name"</h3>
+    <button class="btn btn-large">Начать тест</button>
+</div>
+@{
+    Model.GenerateJSCode();
+    string jscode = System.IO.File.ReadAllText(Program.testpath);
+    jscode += "$(\"document\").ready(function(){$(\"#jQuizler\").jQuizler(questions);});";
+    Program.testpath = Program.testpath.Substring(0,Program.testpath.LastIndexOf("."))+".js";
+    using (StreamWriter sw = new StreamWriter(Program.testpath, false, System.Text.Encoding.UTF8))
+    {
+        sw.WriteLine(jscode);
+    }
+}
+<script type="text/javascript">"$('document').ready(function(){$(#'jQuizler').jQuizler(questions);});"</script>

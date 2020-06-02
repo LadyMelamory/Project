@@ -10,8 +10,8 @@ namespace Project
             Courses = new HashSet<Courses>();
         }
 
-        public int Idsubject { get; set; }// номер предмета
-        public string NamrSubject { get; set; }// название предмета
+        public int Idsubject { get; set; }
+        public string NamrSubject { get; set; }
 
         public virtual ICollection<Courses> Courses { get; set; }
     }

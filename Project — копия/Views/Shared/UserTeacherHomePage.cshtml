@@ -1,0 +1,25 @@
+﻿@using Project;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Страница</title>
+    <script src="~/js/jquery.js"></script>
+    <script type="text/javascript" src="~/js/jQuizler.js"></script>
+    <script type="text/javascript" src="~/js/ScriptsLogin — копия.js"></script>
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" />
+    <link href="~/css/UserTeacherHomePage.css" rel="stylesheet" type="text/css" media="screen" />
+    <link href="~/css/Common.css" rel="stylesheet" type="text/css" media="screen" />
+    <link rel="stylesheet" href="~/css/jQuizler.css" />
+</head>
+<body>
+    <div>
+        @RenderBody();
+        <div class="contentpage">
+            <div>@RenderSection("Test", false)</div>
+            @Html.Partial("Test", new NewTest("F:\\Downloads\\Курсач-20200528T134440Z-001\\Курсач\\Project\\Project\\Project\\wwwroot\\tests\\gtbfvd1.txt"))
+        </div>
+    </div>
+</body> 
+</html>

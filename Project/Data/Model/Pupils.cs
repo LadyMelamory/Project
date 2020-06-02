@@ -5,17 +5,17 @@ namespace Project
 {
     public partial class Pupils
     {
-        public int Idpupil { get; set; }// номер учинека
-        public string Name { get; set; }// его имя
-        public string Surname { get; set; }// фамилия
-        public string Patronymic { get; set; }// отчество
-        public int? Idschool { get; set; }// номер школы
-        public int NamberClass { get; set; }// класс
-        public string Phone { get; set; }// телефон
-        public string Email { get; set; }// майл
-        public string Password { get; set; }// пароль
-        public int Code { get; set; }// код, пока не знаю остнется это поле, но пусть будет
-        public int? Idparent { get; set; }// номер родителей
+        public int Idpupil { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Patronymic { get; set; }
+        public int? Idschool { get; set; }
+        public int NamberClass { get; set; }
+        public string Phone { get; set; }
+        public string Email { get; set; }
+        public string Password { get; set; }
+        public int Code { get; set; }
+        public int? Idparent { get; set; }
 
         public virtual Parents IdparentNavigation { get; set; }
         public virtual School IdschoolNavigation { get; set; }

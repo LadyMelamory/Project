@@ -15,34 +15,44 @@ namespace Project
         {
         }
 
+        public virtual DbSet<Categories> Categories { get; set; }
         public virtual DbSet<Courses> Courses { get; set; }
         public virtual DbSet<Parents> Parents { get; set; }
         public virtual DbSet<Pupils> Pupils { get; set; }
         public virtual DbSet<School> School { get; set; }
+        public virtual DbSet<Shcool> Shcool { get; set; }
+        public virtual DbSet<Statistics> Statistics { get; set; }
         public virtual DbSet<Subject> Subject { get; set; }
         public virtual DbSet<Teachers> Teachers { get; set; }
+        public virtual DbSet<Tests> Tests { get; set; }
+        public virtual DbSet<Translit> Translit { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=CAT;Initial Catalog=EducationSystem;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=CAT;Initial Catalog=EducationSystem;Integrated Security=True;");
             }
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Categories>(entity =>
+            {
+                entity.HasKey(e => e.CategoryId);
+
+                entity.Property(e => e.CategoryId).ValueGeneratedNever();
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
             modelBuilder.Entity<Courses>(entity =>
             {
                 entity.HasKey(e => e.Idcourse)
                     .HasName("PK_Course");
-
-                entity.HasIndex(e => e.Idschool);
-
-                entity.HasIndex(e => e.Idsubgect);
-
-                entity.HasIndex(e => e.Idteachers);
 
                 entity.Property(e => e.Idcourse).HasColumnName("IDCourse");
 
@@ -117,10 +127,6 @@ namespace Project
             {
                 entity.HasKey(e => e.Idpupil);
 
-                entity.HasIndex(e => e.Idparent);
-
-                entity.HasIndex(e => e.Idschool);
-
                 entity.Property(e => e.Idpupil).HasColumnName("IDPupil");
 
                 entity.Property(e => e.Email)
@@ -170,6 +176,25 @@ namespace Project
                 entity.Property(e => e.NameSchool).IsRequired();
             });
 
+            modelBuilder.Entity<Shcool>(entity =>
+            {
+                entity.HasNoKey();
+
+                entity.Property(e => e.Столбец0)
+                    .HasColumnName("Столбец 0")
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+            });
+
+            modelBuilder.Entity<Statistics>(entity =>
+            {
+                entity.HasKey(e => new { e.TestId, e.Idpupil });
+
+                entity.Property(e => e.Idpupil).HasColumnName("IDPupil");
+
+                entity.Property(e => e.Result).HasColumnType("numeric(18, 0)");
+            });
+
             modelBuilder.Entity<Subject>(entity =>
             {
                 entity.HasKey(e => e.Idsubject);
@@ -214,6 +239,43 @@ namespace Project
                 entity.Property(e => e.Surname)
                     .IsRequired()
                     .HasMaxLength(200);
+            });
+
+            modelBuilder.Entity<Tests>(entity =>
+            {
+                entity.HasKey(e => e.TestId);
+
+                entity.Property(e => e.TestId).ValueGeneratedNever();
+
+                entity.Property(e => e.Idcourse).HasColumnName("IDCourse");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(50)
+                    .IsUnicode(false);
+
+                entity.HasOne(d => d.IdcourseNavigation)
+                    .WithMany(p => p.Tests)
+                    .HasForeignKey(d => d.Idcourse)
+                    .HasConstraintName("FK_Tests_Tests");
+            });
+
+            modelBuilder.Entity<Translit>(entity =>
+            {
+                entity.HasKey(e => e.Hiragana);
+
+                entity.Property(e => e.Hiragana).HasMaxLength(50);
+
+                entity.Property(e => e.EnTranslit)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.Katakana)
+                    .IsRequired()
+                    .HasMaxLength(50);
+
+                entity.Property(e => e.RusTranslit)
+                    .IsRequired()
+                    .HasMaxLength(50);
             });
 
             OnModelCreatingPartial(modelBuilder);

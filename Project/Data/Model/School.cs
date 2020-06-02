@@ -11,8 +11,8 @@ namespace Project
             Pupils = new HashSet<Pupils>();
         }
 
-        public int Idschool { get; set; }// номер школы
-        public string NameSchool { get; set; }// название
+        public int Idschool { get; set; }
+        public string NameSchool { get; set; }
 
         public virtual ICollection<Courses> Courses { get; set; }
         public virtual ICollection<Pupils> Pupils { get; set; }
