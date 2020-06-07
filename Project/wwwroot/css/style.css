@@ -1,0 +1,117 @@
+#keyboard_wrapper {
+    background-color: #dbdbdb;
+    padding-top: 30px;
+    text-align: center;
+}
+#field_for_text {
+    font-size: 22px;
+    min-height: 30%;
+    width: 1100px;
+}
+#keyboard {
+    height: 400px;
+    margin-top: -20px;
+    position: relative;
+    width: 1200px;
+}
+.ui-keyboard-bksp span {
+    width: 79px;
+}
+.ui-keyboard-tab span {
+    font-size: 22px;
+    vertical-align: 4px;
+    width: 78px;
+}
+.ui-keyboard-lock span {
+    font-size: 22px;
+    vertical-align: 4px;
+    width: 97px;
+}
+.first_shift span {
+    font-size: 22px;
+    vertical-align: 4px;
+    width: 132px;
+}
+.last_shift span {
+    font-size: 22px;
+    vertical-align: 4px;
+    width: 128px;
+}
+.ui-keyboard-enter span {
+    font-size: 22px;
+    vertical-align: 4px;
+    width: 94px;
+}
+.ui-keyboard-alt span {
+    font-size: 22px;
+    vertical-align: 4px;
+}
+.ui-keyboard-cancel span {
+    font-size: 22px;
+    vertical-align: 4px;
+    width: 100px;
+}
+.ui-keyboard-space {
+    width: 560px;
+}
+.ui-keyboard-space span {
+    font-size: 22px;
+    vertical-align: 4px;
+}
+.ui-keyboard-meta1 span {
+    font-size: 22px;
+    vertical-align: 4px;
+    width: 143px;
+}
+.ui-keyboard-meta2 {
+    min-width: 54px;
+    width: 60px;
+}
+.ui-keyboard-meta2 span {
+    font-size: 28px;
+    vertical-align: 2px;
+}
+.ui-keyboard-del.ui-keyboard-button::after {
+    content: "";
+}
+.ui-keyboard-del span {
+    font-size: 22px;
+    vertical-align: 4px;
+}
+#volume_button {
+    bottom: 12px;
+    position: absolute;
+    right: 119px;
+    z-index: 20000;
+}
+@-moz-document url-prefix("")
+    {
+    .ui-keyboard-tab span {   vertical-align: 2px;   }
+    .ui-keyboard-lock span { vertical-align: 2px;  }
+    .first_shift span {   vertical-align: 2px;  }
+    .last_shift span {  vertical-align: 2px; width: 122px; }
+    .ui-keyboard-enter span {  vertical-align: 4px; width: 88px; }
+    .ui-keyboard-alt span { ; vertical-align: 2px; }
+    .ui-keyboard-cancel span {  vertical-align: 2px; }
+    .ui-keyboard-space  {  vertical-align: 3px; }
+    .ui-keyboard-space span {   }
+    .ui-keyboard-meta1 span {  vertical-align: 2px; }
+    .ui-keyboard-meta2  {  width: 54px;}
+    .ui-keyboard-meta2 span {  vertical-align: 0px; }
+     .ui-keyboard-del span { vertical-align: 2px; }
+    }
+
+#sub_block {
+    height: 20px;
+    width: 100%;
+}
+
+.nav td {
+    font-size: 20px;
+    padding: 0 20px 5px 0;
+}
+.nav a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}

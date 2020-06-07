@@ -217,7 +217,7 @@ namespace Project.Data.Repository
             {
                 foreach(var tmp in esc.Courses)
                 {
-                    if (tmp.Idcourse == idcourses) { result = tmp.CountLessons; break; }
+                    if (tmp.Idcourse == idcourses) { result = (int)tmp.CountLessons; break; }
                 }
             }
             return result;  

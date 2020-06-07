@@ -12,13 +12,92 @@
     <link href="~/css/UserTeacherHomePage.css" rel="stylesheet" type="text/css" media="screen" />
     <link href="~/css/Common.css" rel="stylesheet" type="text/css" media="screen" />
     <link rel="stylesheet" href="~/css/jQuizler.css" />
+    <link rel="stylesheet" href="~/css/KeyboardStyle.css" />
+    <link rel="stylesheet" type="text/css" href="./Японская виртуальная клавиатура онлайн -_files/domain.css" />
+    <link href="~/css/main.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/keyboard-previewkeyset.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/TEXT.CSS" rel="stylesheet" type="text/css" />
+    <script src="~/js/bootstrap.min.js"></script>
 </head>
 <body>
     <div>
         @RenderBody();
         <div class="contentpage">
-            <div>@RenderSection("Test", false)</div>
-            @Html.Partial("Test", new NewTest("F:\\Downloads\\Курсач-20200528T134440Z-001\\Курсач\\Project\\Project\\Project\\wwwroot\\tests\\gtbfvd1.txt"))
+            @*<div>@RenderSection("Test", false)</div>
+        @Html.Partial("Test", new NewTest("F:\\Downloads\\Курсач-20200528T134440Z-001\\Курсач\\Project\\Project\\Project\\wwwroot\\tests\\gtbfvd1.txt"))*@
+            @* @Html.Partial("KeyBoard")*@
+            @** @Html.Partial("KeyBoard2")
+        @Html.Partial("KeyBoard3")*@
+            <div id="facts" class="hide">
+                <!-- role="tabpanel"class="tab-pane fade">-->
+                    <div class="container-fluid">
+                        <h2>Курс "Базовый курс японского языка"</h2>
+                        <div class="accordion" id="accordionExample">
+                            <div class="card">
+                                <div class="card-header" id="headingOne">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Урок 1. Изучаем хирагану и катакану. Ряд А
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="elastic">
+                                            В японском языке существует две азбуки - хирагана и катакана. В этом уроке мы изучим знаки каны ряда КА. Больше информации представлено в прикрепленных файлах. Изучите их и выполните приведеные ниже задания.
+                                        </p>
+                                        <a>Японские азбуки. Введение. Слоги.pptx</a>
+                                        <br />
+                                        <a>Хирагана КА.docx</a>
+                                        <br />
+                                        <a>Катакана КА.docx</a>
+                                        <br />
+                                        <br />
+                                        <p>Запишите хираганой слово "кику" (слушать)</p>
+                                        <button>Выполнить задание</button>
+                                        @Html.Partial("KeyBoard3")
+                                        <button>Сохранить мой ответ</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingTwo">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Урок 2. Ряды КА и ГА. Озвончение
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="elastick">
+                                            Посмотрите видео и пройдите небольшой тест
+                                        </p>
+                                        <iframe width="850" height="478" src="https://www.youtube.com/embed/SXd8dXsqUoo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                        @Html.Partial("Test", new NewTest("F:\\Downloads\\Курсач-20200528T134440Z-001\\Курсач\\Project\\Project\\Project\\wwwroot\\tests\\Хирагана.Катакана.Озвончение.Слоги рядов А, КА, ГА.txt"))
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h2 class="mb-0">
+                                        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                           Урок 3. Ряды СА, ДЗА, ТА, ДА. Произношение
+                                        </button>
+                                    </h2>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                        <p class="elastic">
+                                          В этом уроке рассмотрим новые ряды, а также поговорим о произношении.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>                           
+                        </div>
+                    </div>
+            </div>
         </div>
     </div>
 </body> 

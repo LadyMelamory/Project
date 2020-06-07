@@ -1,0 +1,1262 @@
+﻿<table cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+        <tr bgcolor="#FFFFFF" height="35" valign="middle">
+            <td align="left">
+                &nbsp;<input name="overtextbox1" id="overtextbox1" type="checkbox" checked="" onclick="colorbox('textbox1')" style="height:13px; width:13px; margin:0px;">
+            </td>
+            <td>
+                <span style=" font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold; color:black; ">убрать клавиатуру</span>
+            </td>
+            <td align="right">
+                <input type="button" value="Выделить все" onclick="selcop('textbox1')" style="font-size:11px;">
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" valign="bottom">
+                <table cellpadding="0" cellspacing="0" align="center">
+                    <tbody>
+                        <tr valign="center">
+                            <td valign="top" bgcolor="#FFFFFF" <="" td="">
+</td>
+                            <td bgcolor="#FFFFFF">
+<textarea style="font-size: 16px; border-width: 1px; background: rgb(255, 255, 255);" type="text" name="textbox1" id="textbox1" cols="46" rows="8" onfocus="toogleboard('textbox1')" onclick="setCursorPos()">
+</textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" align="center" bgcolor="#FFFFFF">
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div id="keybordpos" align="center">
+    <table border="3" id="scnbord" style="display: block;" align="center" width="480" cellpadding="0" cellspacing="0">
+        <tbody>
+            <tr>
+                <td valign="top">
+                    <table cellspacing="0" cellpadding="0" bgcolor="#000000">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <script src="~/js/klav.js" type="text/javascript" language="JavaScript">
+                                    </script>
+                                    <script language="javascript">
+                                        dkey[2] = new Array('', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '')
+                                        drawkeyboard()
+                                        drawchars(fonts)
+                                        toogleboard('textbox1')
+                                        bakecookies()
+                                        document.onkeydown = keyHandlerdown;
+                                        document.onkeyup = keyHandlerup;
+                                        document.onkeypress = keyHandlerpress;
+                                        document.onload = curtex.focus();
+                                    </script>
+                                    <table cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni1" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(1);" onmouseout="virtualHandlerUp(1);" onmouseup="virtualHandlerUp(1);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ろ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni2" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(2);" onmouseout="virtualHandlerUp(2);" onmouseup="virtualHandlerUp(2);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ぬ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni3" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(3);" onmouseout="virtualHandlerUp(3);" onmouseup="virtualHandlerUp(3);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ふ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni4" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(4);" onmouseout="virtualHandlerUp(4);" onmouseup="virtualHandlerUp(4);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ぁ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni5" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(5);" onmouseout="virtualHandlerUp(5);" onmouseup="virtualHandlerUp(5);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ぅ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni6" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(6);" onmouseout="virtualHandlerUp(6);" onmouseup="virtualHandlerUp(6);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ぇ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni7" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(7);" onmouseout="virtualHandlerUp(7);" onmouseup="virtualHandlerUp(7);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ぉ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni8" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(8);" onmouseout="virtualHandlerUp(8);" onmouseup="virtualHandlerUp(8);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ゃ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni9" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(9);" onmouseout="virtualHandlerUp(9);" onmouseup="virtualHandlerUp(9);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ゅ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni10" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(10);" onmouseout="virtualHandlerUp(10);" onmouseup="virtualHandlerUp(10);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ょ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni11" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(11);" onmouseout="virtualHandlerUp(11);" onmouseup="virtualHandlerUp(11);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">を </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni12" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(12);" onmouseout="virtualHandlerUp(12);" onmouseup="virtualHandlerUp(12);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ー </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni13" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(13);" onmouseout="virtualHandlerUp(13);" onmouseup="virtualHandlerUp(13);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">へ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="58.5" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni14" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(14);" onmouseout="virtualHandlerUp(14);" onmouseup="virtualHandlerUp(14);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="50%" valign="top" height="100%">Backspace</td>
+                                                                                <td style="border:0" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <table cellspacing="0" cellpadding="0" border="0">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <table cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="45.75" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni15" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(15);" onmouseout="virtualHandlerUp(15);" onmouseup="virtualHandlerUp(15);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="50%" valign="top" height="100%">Tab</td>
+                                                                                                <td style="border:0" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni16" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(16);" onmouseout="virtualHandlerUp(16);" onmouseup="virtualHandlerUp(16);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">た </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni17" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(17);" onmouseout="virtualHandlerUp(17);" onmouseup="virtualHandlerUp(17);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">て </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni18" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(18);" onmouseout="virtualHandlerUp(18);" onmouseup="virtualHandlerUp(18);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ぃ </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni19" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#FCFCFC" onmousedown="virtualHandlerPress(19);" onmouseout="virtualHandlerUp(19);" onmouseup="virtualHandlerUp(19);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">す </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni20" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(20);" onmouseout="virtualHandlerUp(20);" onmouseup="virtualHandlerUp(20);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">か </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni21" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(21);" onmouseout="virtualHandlerUp(21);" onmouseup="virtualHandlerUp(21);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ん </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni22" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(22);" onmouseout="virtualHandlerUp(22);" onmouseup="virtualHandlerUp(22);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">な </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni23" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(23);" onmouseout="virtualHandlerUp(23);" onmouseup="virtualHandlerUp(23);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">に </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni24" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(24);" onmouseout="virtualHandlerUp(24);" onmouseup="virtualHandlerUp(24);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ら </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni25" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(25);" onmouseout="virtualHandlerUp(25);" onmouseup="virtualHandlerUp(25);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">せ </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni26" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(26);" onmouseout="virtualHandlerUp(26);" onmouseup="virtualHandlerUp(26);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">「 </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni27" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(27);" onmouseout="virtualHandlerUp(27);" onmouseup="virtualHandlerUp(27);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">」 </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="0" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="8.03" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; border-right:0; font-size:11px; font-weight:100; cursor:pointer" id="uni28" height="100%" width="100%" border="1" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(28);" onmouseout="virtualHandlerUp(28);" onmouseup="virtualHandlerUp(28);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border:0" width="40%" valign="top" height="100%">
+                                                                                                </td>
+                                                                                                <td style="border:0" height="100%" width="40%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <table cellspacing="0" cellpadding="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="53.25" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni29" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(29);" onmouseout="virtualHandlerUp(29);" onmouseup="virtualHandlerUp(29);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="50%" valign="top" height="100%">CapsLock</td>
+                                                                                                <td style="border:0" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni30" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(30);" onmouseout="virtualHandlerUp(30);" onmouseup="virtualHandlerUp(30);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ち </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni31" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(31);" onmouseout="virtualHandlerUp(31);" onmouseup="virtualHandlerUp(31);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">と </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni32" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(32);" onmouseout="virtualHandlerUp(32);" onmouseup="virtualHandlerUp(32);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">し </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni33" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(33);" onmouseout="virtualHandlerUp(33);" onmouseup="virtualHandlerUp(33);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">は </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni34" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(34);" onmouseout="virtualHandlerUp(34);" onmouseup="virtualHandlerUp(34);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">き </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni35" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(35);" onmouseout="virtualHandlerUp(35);" onmouseup="virtualHandlerUp(35);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">く </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni36" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(36);" onmouseout="virtualHandlerUp(36);" onmouseup="virtualHandlerUp(36);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ま </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni37" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(37);" onmouseout="virtualHandlerUp(37);" onmouseup="virtualHandlerUp(37);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">の </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni38" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(38);" onmouseout="virtualHandlerUp(38);" onmouseup="virtualHandlerUp(38);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">り </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni39" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(39);" onmouseout="virtualHandlerUp(39);" onmouseup="virtualHandlerUp(39);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">れ </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni40" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(40);" onmouseout="virtualHandlerUp(40);" onmouseup="virtualHandlerUp(40);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">け </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                                <td border="0">
+                                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td width="30" height="33">
+                                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni41" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(41);" onmouseout="virtualHandlerUp(41);" onmouseup="virtualHandlerUp(41);">
+                                                                                        <tbody>
+                                                                                            <tr>
+                                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">む </td>
+                                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                                </td>
+                                                                                            </tr>
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="0" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="36.5" height="68">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; border-left:0 none #000000; font-size:11px; font-weight:100; cursor:pointer" id="uni42" height="100%" width="100%" border="1" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(42);" onmouseout="virtualHandlerUp(42);" onmouseup="virtualHandlerUp(42);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="40%" valign="top" height="100%">Enter</td>
+                                                                                <td style="border:0" height="100%" width="40%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+
+
+
+
+
+
+
+
+
+                                    <table cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="37.5" height="33">
+                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni43" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#FF9393" onmousedown="virtualHandlerPress(43);" onmouseout="virtualHandlerUp(43);" onmouseup="virtualHandlerUp(43);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="50%" valign="top" height="100%">Shift</td>
+                                                                                <td style="border:0" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni44" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(44);" onmouseout="virtualHandlerUp(44);" onmouseup="virtualHandlerUp(44);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%"> </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni45" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(45);" onmouseout="virtualHandlerUp(45);" onmouseup="virtualHandlerUp(45);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">っ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni46" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(46);" onmouseout="virtualHandlerUp(46);" onmouseup="virtualHandlerUp(46);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">さ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni47" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(47);" onmouseout="virtualHandlerUp(47);" onmouseup="virtualHandlerUp(47);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">そ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni48" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(48);" onmouseout="virtualHandlerUp(48);" onmouseup="virtualHandlerUp(48);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">ひ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni49" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(49);" onmouseout="virtualHandlerUp(49);" onmouseup="virtualHandlerUp(49);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">こ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni50" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(50);" onmouseout="virtualHandlerUp(50);" onmouseup="virtualHandlerUp(50);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">み </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni51" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(51);" onmouseout="virtualHandlerUp(51);" onmouseup="virtualHandlerUp(51);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">も </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni52" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(52);" onmouseout="virtualHandlerUp(52);" onmouseup="virtualHandlerUp(52);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">、 </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-width: medium thick thick medium; font-size: 11px; font-weight: 100; cursor: pointer;" id="uni53" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#93B9FF" onmousedown="virtualHandlerPress(53);" onmouseout="virtualHandlerUp(53);" onmouseup="virtualHandlerUp(53);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">。 </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="30" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni54" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(54);" onmouseout="virtualHandlerUp(54);" onmouseup="virtualHandlerUp(54);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">・ </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="82.5" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni55" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(55);" onmouseout="virtualHandlerUp(55);" onmouseup="virtualHandlerUp(55);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="50%" valign="top" height="100%">Shift</td>
+                                                                                <td style="border:0" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+
+
+
+                                    <table cellspacing="0" cellpadding="0">
+                                        <tbody>
+                                            <tr>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="55.5" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni56" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(56);" onmouseout="virtualHandlerUp(56);" onmouseup="virtualHandlerUp(56);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="50%" valign="top" height="100%">Ctrl</td>
+                                                                                <td style="border:0" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="55.5" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni57" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(57);" onmouseout="virtualHandlerUp(57);" onmouseup="virtualHandlerUp(57);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="50%" valign="top" height="100%">Alt</td>
+                                                                                <td style="border:0" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="246" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni58" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(58);" onmouseout="virtualHandlerUp(58);" onmouseup="virtualHandlerUp(58);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 14px; color: rgb(0, 0, 0);" width="50%" valign="top" height="100%">  </td>
+                                                                                <td style="border: 0px; font-size: 14px;" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="55.5" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni59" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(59);" onmouseout="virtualHandlerUp(59);" onmouseup="virtualHandlerUp(59);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="50%" valign="top" height="100%">Alt</td>
+                                                                                <td style="border:0" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td border="0">
+                                                    <table cellspacing="0" cellpadding="1" border="0">
+                                                        <tbody>
+                                                            <tr>
+                                                                <td width="55.5" height="33">
+                                                                    <table style="border-left-width:medium; border-top-width:medium;  border-right-width:thick; border-bottom-width:thick; font-size:11px; font-weight:100; cursor:pointer" id="uni60" height="100%" width="100%" border="2" cellspacing="0" cellpadding="0" bordercolordark="#C6C1AF" bordercolorlight="#FFFFFF" bgcolor="#D6D3D3" onmousedown="virtualHandlerPress(60);" onmouseout="virtualHandlerUp(60);" onmouseup="virtualHandlerUp(60);">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td style="border: 0px; font-size: 9px; color: black;" width="50%" valign="top" height="100%">Ctrl</td>
+                                                                                <td style="border:0" height="100%" width="50%" valign="bottom">
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>

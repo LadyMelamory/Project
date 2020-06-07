@@ -1,0 +1,22 @@
+// Keyboard Language
+// please update this section to match this language and email me with corrections!
+// ru = ISO 639-1 code for Russian
+// ***********************
+
+jQuery.keyboard.language.en = {
+    language: 'English',
+    display : {
+        'meta1'  : 'Select all:Select all text', // Diamond
+        'alt'    : 'EN:English',
+        'b'      : '\u2190:Backspace',    // Left arrow (same as &larr;)
+        'bksp'   : '\u2190:Backspace',
+        'cancel' : 'Cancel:Cancel',
+        'enter'  : 'Enter:Enter',
+        'lock'   : '\u21ea Caps:Caps Lock', // caps lock
+        'shift'  : '\u21e7 Shift:Shift',
+        'space'  : 'Spacebar:Spacebar',
+        't'      : '\u21e5:Tab',          // right arrow to bar (used since this virtual keyboard works with one directional tabs)
+        'tab'    : '\u21e5 Tab:Tab',       // \u21b9 is the true tab symbol (left & right arrows)
+        'del'    : 'Del:Delete'
+    }
+};
